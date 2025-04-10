@@ -1,0 +1,11 @@
+.App {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+  background: linear-gradient(135deg, #c2f5d3 0%, #b8e7ff 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

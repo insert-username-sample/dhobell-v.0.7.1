@@ -1,0 +1,169 @@
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0;
+  text-align: center;
+  background: linear-gradient(-45deg, #ffb5a7, #fcd5ce, #b5e2fa, #a8e6cf);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  position: relative;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.washer-container {
+  margin: 8rem 0 4rem 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.washing-machine {
+  width: 240px;
+  height: 280px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.machine-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #ffffff, #e0e0e0, #d0d0d0);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ccc;
+}
+
+.lid {
+  width: 70%;
+  height: 50%;
+  margin: 10% auto 0;
+  background: rgba(255, 255, 255, 0.15);
+  border: 4px solid #d8d8d8;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.control-panel {
+  width: 80%;
+  height: 25%;
+  margin: 5% auto;
+  background: linear-gradient(145deg, #e6e6e6, #f0f0f0);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dial {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(145deg, #ffffff, #d4d4d4);
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dial::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 15px;
+  background: #666;
+  transform: translate(-50%, -50%);
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.button {
+  width: 30px;
+  height: 20px;
+  background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.led {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  margin: 4px;
+  box-shadow: 0 0 5px #22c55e;
+}
+
+.water {
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(45deg, #64b5f6, #2196f3, #1976d2);
+  opacity: 0.4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 4s linear infinite;
+}
+
+.clothes {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: tumble 4s linear infinite;
+}
+
+.clothes span {
+  position: absolute;
+  font-size: 1.5rem;
+}
+
+.clothes span:nth-child(1) { top: 30%; left: 20%; }
+.clothes span:nth-child(2) { top: 50%; left: 50%; }
+.clothes span:nth-child(3) { top: 40%; left: 70%; }
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  50% { transform: translate(-50%, -50%) rotate(180deg) scale(1.1); }
+  100% { transform: translate(-50%, -50%) rotate(360deg) scale(1); }
+}
+
+@keyframes tumble {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(10px, 10px); }
+  50% { transform: translate(0, 15px); }
+  75% { transform: translate(-10px, 10px); }
+  100% { transform: translate(0, 0); }
+}
+
+.coming-soon h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.coming-soon p {
+  font-size: 1.2rem;
+  color: #404040;
+  margin-bottom: 0.5rem;
+  max-width: 600px;
+}
